@@ -87,6 +87,7 @@ sudo bash start_delegating.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
 - **GAS FEE FOR THIS OPERATION IS 3 CSPR (STANDARD)**
+- **FEEL FREE TO DELEGATE TO OUR OWN VALIDATOR ON THE CASPER MAINNET: 01d760ef05a8ff2569f92fdc08df515dc8e22ea2baf3484d249fad2ccdebcc9a51**
 
 ## ![alt text](/docs/BWARE-icon.png) How to start a transfer
 - Go to casper-delegate directory
