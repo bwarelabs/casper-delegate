@@ -35,14 +35,17 @@ echo -e "${CYAN}Balance: ${NC}${BALANCE%?????????} ${CYAN}CSPR${NC}"
 
 CHAIN_NAME=$(curl -s http://${TARGET_HOST}:8888/status | jq -r '.chainspec_name')
 
-read -p "You are about to transfer ${AMOUNT} motes, 10000 motes fee, from ${PUBLIC_KEY_HEX} to ${TARGET_PUBLIC_KEY_HEX}. Do you want to proceed (yes/no)?" choice
+MOTES="000000000"
+AMOUNT_IN_MOTES="${AMOUNT}${MOTES}"
+
+read -p "You are about to transfer ${AMOUNT} CSPR (${AMOUNT_IN_MOTES} motes), 10000 motes fee, from ${PUBLIC_KEY_HEX} to ${TARGET_PUBLIC_KEY_HEX}. Do you want to proceed (yes/no)?" choice
 if [ "$choice" == "yes" ] ; then
     casper-client transfer \
     --id "$ID" \
     --chain-name "$CHAIN_NAME" \
     --node-address "http://${TARGET_HOST}:7777/" \
     --secret-key "${KEY_BASE_DIR}/secret_key.pem" \
-    --amount "$AMOUNT" \
+    --amount "$AMOUNT_IN_MOTES" \
     --payment-amount 10000 \
     --target-account "$TARGET_PUBLIC_KEY_HEX"
 elif [ "$choice" == "no" ] ; then

@@ -2,5 +2,5 @@ export CASPER_VERSION=1_1_0
 export USERNAME=local
 export HOMEDIR=/home/${USERNAME}
 export GAS="3000000000" #stardard delegation fee in motes - 3 CSPR for deploying contract
-export AMOUNT="1" #amount in motes
+export AMOUNT="1" #amount to be delegated in CSPR
 export VALIDATOR_PUBLIC_KEY_HEX="01d760ef05a8ff2569f92fdc08df515dc8e22ea2baf3484d249fad2ccdebcc9a51" #Target validator

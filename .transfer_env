@@ -1,4 +1,4 @@
 export CASPER_VERSION=1_1_0
 export ID="SOME INTEGER"
-export AMOUNT="868800000000" #in motes
+export AMOUNT="30" #amount to be transfered in CSPR
 export TARGET_PUBLIC_KEY_HEX="TARGE PUBLIC KEY HEX HERE"

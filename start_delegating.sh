@@ -35,7 +35,10 @@ echo -e "${CYAN}Balance: ${NC}${BALANCE%?????????} ${CYAN}CSPR${NC}"
 
 CHAIN_NAME=$(curl -s http://${TARGET_HOST}:8888/status | jq -r '.chainspec_name')
 
-read -p "You are about to delegate ${AMOUNT} motes, ${GAS} motes fee, from ${PUBLIC_KEY_HEX} to ${VALIDATOR_PUBLIC_KEY_HEX}. Do you want to proceed (yes/no)?" choice
+MOTES="000000000"
+AMOUNT_IN_MOTES="${AMOUNT}${MOTES}"
+
+read -p "You are about to delegate ${AMOUNT} CSPR (${AMOUNT_IN_MOTES} motes), ${GAS} motes fee, from ${PUBLIC_KEY_HEX} to ${VALIDATOR_PUBLIC_KEY_HEX}. Do you want to proceed (yes/no)?" choice
 if [ "$choice" == "yes" ] ; then
     casper-client put-deploy \
     --chain-name "$CHAIN_NAME" \
@@ -44,7 +47,7 @@ if [ "$choice" == "yes" ] ; then
     --session-path "${HOMEDIR}/casper-node/target/wasm32-unknown-unknown/release/delegate.wasm" \
     --payment-amount "$GAS" \
     --session-arg "validator:public_key='$VALIDATOR_PUBLIC_KEY_HEX'" \
-    --session-arg "amount:u512='$AMOUNT'"\
+    --session-arg "amount:u512='$AMOUNT_IN_MOTES'"\
     --session-arg "delegator:public_key='$PUBLIC_KEY_HEX'"
 elif [ "$choice" == "no" ] ; then
     echo "You have cancelled the delegating request"
