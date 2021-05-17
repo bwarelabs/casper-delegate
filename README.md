@@ -15,13 +15,13 @@
   - **USERNAME** - same as above
   - **HOMEDIR** - same as above
   - **GAS** - amount of motes (1 CSPR = 10^9 motes) to pay for the delegation request - standard is 3 CSPR (= 3 * 10^9 motes)
-  - **AMOUNT** - amount of motes (1 CSPR = 10^9 motes) you wish to delegate - **PAY ATTENTION TO WHAT YOU INPUT**
+  - **AMOUNT** - amount of CSPR you wish to delegate - **PAY ATTENTION TO WHAT YOU INPUT**
   - **VALIDATOR_PUBLIC_KEY_HEX** - public key hex of the validator you wish to delegate to - **PAY ATTENTION TO WHAT YOU INPUT**
   - _INTERESTING FACT: THE DEFAULT VALIDATOR_PUBLIC_KEY_HEX FOUND IN THE FILE IS BwareLabs' OWN CASPER VALIDATOR - FEEL FREE TO DELEGATE TO US!_
 - _.transfer_env_ - this contains important environment variables which are needed in order to properly start a transfer to another wallet
   - **CASPER_VERSION** - same as above
   - **ID** - transaction ID (type in an integer of your choice so you know this is your transaction)
-  - **AMOUNT** - amount of motes (1 CSPR = 10^9 motes) you wish to transfer - **PAY ATTENTION TO WHAT YOU INPUT**
+  - **AMOUNT** - amount of CSPR you wish to transfer - **PAY ATTENTION TO WHAT YOU INPUT**
   - **TARGET_PUBLIC_KEY_HEX** - public key hex of the target wallet/account - **PAY ATTENTION TO WHAT YOU INPUT**
   - _INTERESTING FACT: ALL THE TRANSFERS ON THE CASPER BLOCKCHAIN HAVE A STANDARD TRANSACTION FEE OF 10000 MOTES - THIS IS HARDCODED IN THE TRANSFER SCRIPT SO YOU DON'T HAVE TO WORRY ABOUT IT_
 - _check_balance.sh_ - main script that checks balance of an account (either from local machine OR by providing a public key hex) - either provide a PUBLIC_KEY_HEX of a known account, or the script will try and find the PUBLIC_KEY_HEX from your local machine
@@ -86,7 +86,6 @@ cd casper-delegate
 sudo bash start_delegating.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
-- **THE DELEGATED AMOUNT SHOULD BE WRITTEN IN MOTES (EXAMPLE: 23 CSPR = 23000000000 MOTES)**
 - **GAS FEE FOR THIS OPERATION IS 3 CSPR (STANDARD)**
 
 ## ![alt text](/docs/BWARE-icon.png) How to start a transfer
@@ -100,7 +99,6 @@ cd casper-delegate
 sudo bash start_transfer.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
-- **THE TRANSFER AMOUNT SHOULD BE WRITTEN IN MOTES (EXAMPLE: 18 CSPR = 18000000000 MOTES)**
 - **GAS FEE FOR THIS OPERATION IS 10,000 MOTES (STANDARD)**
 
 ## ![alt text](/docs/BWARE-icon.png) Contact
