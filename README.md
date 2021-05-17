@@ -73,7 +73,7 @@ cat /etc/casper/validator_keys/public_key_hex
 cat /etc/casper/validator_keys/secret_key.pem
 ```
 - You can copy paste the value stored in _/etc/casper/validator_keys/public_key_hex_ in the [Casper Explorer](https://cspr.live) to check your balance
-- This address can now be used to withdraw CSPR from your preferred exchange (Coinlist, Huobi, AscendEx, etc) if you want to delegate them to a known validator
+- This address (the _public_key_hex_) can now be used to withdraw CSPR from your preferred exchange (Coinlist, Huobi, AscendEx, etc) if you want to delegate them to a known validator
 
 ## ![alt text](/docs/BWARE-icon.png) How to start a delegation request
 - Go to casper-delegate
