@@ -86,7 +86,7 @@ cd casper-delegate
 sudo bash start_delegating.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
-- **THE DELEGATED AMOUNT SHOULD BE WRITTEN IN MOTES**
+- **THE DELEGATED AMOUNT SHOULD BE WRITTEN IN MOTES (EXAMPLE: 23 CSPR = 23000000000 MOTES)**
 - **GAS FEE FOR THIS OPERATION IS 3 CSPR (STANDARD)**
 
 ## ![alt text](/docs/BWARE-icon.png) How to start a transfer
@@ -100,7 +100,7 @@ cd casper-delegate
 sudo bash start_transfer.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
-- **THE TRANSFER AMOUNT SHOULD BE WRITTEN IN MOTES**
+- **THE TRANSFER AMOUNT SHOULD BE WRITTEN IN MOTES (EXAMPLE: 18 CSPR = 18000000000 MOTES)**
 - **GAS FEE FOR THIS OPERATION IS 10,000 MOTES (STANDARD)**
 
 ## ![alt text](/docs/BWARE-icon.png) Contact
