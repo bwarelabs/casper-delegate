@@ -77,6 +77,7 @@ cat /etc/casper/validator_keys/public_key_hex
 cd casper-delegate
 ```
 - Carefully complete _.delegate_env_ with the appropiate values, depending on your use case
+- **IMPORTANT: AMOUNT TO DELEGATE WILL BE SET IN MOTES**
 - From the ${START_DIR}, run the following command in your terminal:
 ```
 sudo bash start_delegating.sh
@@ -90,12 +91,13 @@ sudo bash start_delegating.sh
 cd casper-delegate
 ```
 - Carefully complete _.transfer_env_ with the appropiate values, depending on your use case
+- **IMPORTANT: AMOUNT TO TRANSFER WILL BE SET IN MOTES**
 - From the ${START_DIR}, run the following command in your terminal:
 ```
 sudo bash start_transfer.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
-- - **GAS FEE FOR THIS OPERATION IS 10,000 MOTES (STANDARD)**
+- **GAS FEE FOR THIS OPERATION IS 10,000 MOTES (STANDARD)**
 
 ## ![alt text](/docs/BWARE-icon.png) Contact
 
