@@ -56,6 +56,20 @@ cd casper-delegate
 sudo bash install_client_for_delegation.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
+- **IMPORTANT: IN THIS STEP YOU WILL CREATE A KEY PAIR FOR YOUR NEW CSPR ACCOUNT**
+
+## ![alt text](/docs/BWARE-icon.png) How to withdraw CSPR in your account
+- In the installation step, you have created a new KEY PAIR, which can be found in _/etc/casper/validator_keys_
+```
+ls -alt /etc/casper/validator_keys
+```
+- **IMPORTANT: YOU SHOULD STORE YOUR ACCOUNT INFORMATION (ESPECIALLY YOU PRIVATE KEY) IN A SAFE MANNER**
+- You can find the public key for your account in the _/etc/casper/validator_keys/public_key_hex_ file
+```
+cat /etc/casper/validator_keys/public_key_hex
+```
+- You can copy paste the value stored in this file in the [Casper Explorer](https://cspr.live) to check your balance
+- This address can now be used to withdraw CSPR from your preferred exchange (Coinlist, Huobi, AscendEx, etc)
 
 ## ![alt text](/docs/BWARE-icon.png) How to start a delegation request
 - Go to casper-delegate
@@ -68,6 +82,7 @@ cd casper-delegate
 sudo bash start_delegating.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
+- **GAS FEE FOR THIS OPERATION IS 3 CSPR (STANDARD)**
 
 ## ![alt text](/docs/BWARE-icon.png) How to start a transfer
 - Go to casper-delegate directory
@@ -80,6 +95,7 @@ cd casper-delegate
 sudo bash start_transfer.sh
 ```
 - This can be run as root, the user handling is made inside the scripts
+- - **GAS FEE FOR THIS OPERATION IS 10,000 MOTES (STANDARD)**
 
 ## ![alt text](/docs/BWARE-icon.png) Contact
 
